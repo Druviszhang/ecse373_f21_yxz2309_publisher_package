@@ -1,12 +1,14 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "publisher_package/topic_name.h" 
 
 #include <sstream>
 
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
-int main(int argc, char **argv)
+
+;int main(int argc, char **argv)
 {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
@@ -44,7 +46,7 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("publisher_topic", 1000);
+  ros::Publisher chatter_pub = n.advertise<std_msgs::String>(topic_name, 1000);
 
   ros::Rate loop_rate(1);
 
